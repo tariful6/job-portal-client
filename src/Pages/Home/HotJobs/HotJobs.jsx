@@ -9,9 +9,12 @@ const HotJobs = () => {
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, []);
+  console.log(jobs);
+  
 
   return (
     <div className=" container mx-auto  grid grid-cols-3 gap-6 py-9">
+
       {jobs.map((job) => (
         <JobsCart key={job._id} job={job}></JobsCart>
       ))}
