@@ -19,12 +19,12 @@ const SignIn = () => {
         const password = form.password.value;
         signInUser(email, password)
         .then(res => {
-            // console.log(res.user.email)
-            const user = {email : res.user.email};
-            axios.post('http://localhost:5000/jwt', user, {withCredentials : true})
-            .then(res => {
-                console.log(res.data);
-            })
+            console.log(res.user.email)
+            // const user = {email : res.user.email};
+            // axios.post('http://localhost:5000/jwt', user, {withCredentials : true})
+            // .then(res => {
+            //     console.log(res.data);
+            // })
             
             navigate(from)
          })
