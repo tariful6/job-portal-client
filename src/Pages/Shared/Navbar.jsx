@@ -19,10 +19,9 @@ const Navbar = () => {
             <li><NavLink to="/myApplication"> My Application</NavLink></li> 
             <li><NavLink to="/addJob"> Add Job</NavLink></li> 
             <li><NavLink to="/myPostedJob"> My Posted Job</NavLink></li> 
+            <li><NavLink to="/jobs">Jobs</NavLink></li> 
         </>: <></>
        }
-       
-       <li><NavLink to="/">Home</NavLink></li>
     </>
     return (
         <div className="bg-base-100 shadow-sm ">

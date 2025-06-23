@@ -15,7 +15,7 @@ const AddJob = () => {
         console.log(initialData);
         const {min, max, currency, ...newJob} = initialData;
         // console.log(newJob);
-        newJob.salaryRange = {min, max, currency}
+        newJob.salaryRange = {min: parseInt(min), max:parseInt(max), currency}
         newJob.responsibilities = newJob.responsibilities.split('\n')
         newJob.requirements = newJob.requirements.split('\n')
         console.log(newJob);
@@ -80,10 +80,10 @@ const AddJob = () => {
                             <label className="label mb-1">Salary Range</label>
                             <div className=" flex gap-3">
                                 <div className=" mb-3 w-1/2">
-                                <input name="min" type="text" className="input w-full" placeholder="Min"  required/>
+                                <input name="min" type="number" className="input w-full" placeholder="Min"  required/>
                                 </div>
                                 <div className=" w-1/2">
-                                <input name="max" type="text" className="input w-full" placeholder="Max"  required/>
+                                <input name="max" type="number" className="input w-full" placeholder="Max"  required/>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@ const AddJob = () => {
                             </div>
                             <div className=" w-1/2">
                                <label className="label">Hr Email</label>
-                               <input defaultValue={user?.email} name="hr_email" type="email" className="input w-full" placeholder="Hr Email"  required/>
+                               <input readOnly defaultValue={user?.email} name="hr_email" type="email" className="input w-full" placeholder="Hr Email"  required/>
                             </div>
                         </div>
                         <div className="flex gap-3">
